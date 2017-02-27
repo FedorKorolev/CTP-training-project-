@@ -1,5 +1,5 @@
 //
-//  ViewController.swift
+//  CTPViewController.swift
 //  CTP
 //
 //  Created by Фёдор Королёв on 27.02.17.
@@ -8,18 +8,23 @@
 
 import UIKit
 
-class ViewController: UIViewController {
+class CTPViewController: UIViewController, CTPViewDelegate {
 
+//    var estimator = Estimator()
+    
+    @IBOutlet weak var ctpView: CTPView!
+    
     override func viewDidLoad() {
         super.viewDidLoad()
         // Do any additional setup after loading the view, typically from a nib.
     }
-
-    override func didReceiveMemoryWarning() {
-        super.didReceiveMemoryWarning()
-        // Dispose of any resources that can be recreated.
+    
+    func setup() {
+        ctpView.delegate = self
     }
-
+    
+    func estimate(){}
+    
 
 }
 
